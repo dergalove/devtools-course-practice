@@ -31,7 +31,7 @@ TEST(Dergalova_Arina_ComplexNumberTest1, sum) {
 
 TEST(Dergalova_Arina_ComplexNumberTest2, substract) {
 	double re1 = 4.0;
-	double im1 = 2.0;
+	double im1 = 4.0;
 
 	double re2 = 5.0;
 	double im2 = 2.0;
