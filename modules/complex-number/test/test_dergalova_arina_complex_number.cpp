@@ -10,8 +10,8 @@ TEST(Dergalova_Arina_ComplexNumberTest, add) {
 
 	ComplexNumber num(re, im);
 
-	EXPECT_DOUBLE_EQ(re, num.getRe());
-	EXPECT_DOUBLE_EQ(im, num.getIm());
+	EXPECT_EQ(re, num.getRe());
+	EXPECT_EQ(im, num.getIm());
 }
 
 TEST(Dergalova_Arina_ComplexNumberTest, sum) {
@@ -70,8 +70,8 @@ TEST(Dergalova_Arina_ComplexNumberTest, div) {
 
 	ComplexNumber num = c1 / c2;
 
-	EXPECT_DOUBLE_EQ(1, num.getRe());
-	EXPECT_DOUBLE_EQ(0, num.getIm());
+	EXPECT_EQ(1, num.getRe());
+	EXPECT_EQ(0, num.getIm());
 }
 
 
