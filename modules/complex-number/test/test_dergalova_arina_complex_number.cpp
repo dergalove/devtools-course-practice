@@ -16,7 +16,7 @@ TEST(Dergalova_Arina_ComplexNumberTest, Sum) {
 
 	ComplexNumber result = c1 + c2;
 
-	EXPECT_DOUBLE_EQ(6.0, result.getRe());
+	EXPECT_DOUBLE_EQ(7.0, result.getRe());
 	EXPECT_DOUBLE_EQ(4.0, result.getIm());
 }
 
