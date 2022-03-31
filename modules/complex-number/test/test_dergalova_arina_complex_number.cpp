@@ -4,7 +4,7 @@
 
 #include "include/complex_number.h"
 
-TEST(Dergalova_Arina_ComplexNumberTest, add) {
+TEST(Dergalova_Arina_ComplexNumberTest0, add) {
 	double re = 0.0;
 	double im = 0.0;
 
@@ -14,7 +14,7 @@ TEST(Dergalova_Arina_ComplexNumberTest, add) {
 	EXPECT_DOUBLE_EQ(im, num.getIm());
 }
 
-TEST(Dergalova_Arina_ComplexNumberTest, sum) {
+TEST(Dergalova_Arina_ComplexNumberTest1, sum) {
 	double re1 = 1.5;
 	double im1 = 0.3;
 
@@ -29,7 +29,7 @@ TEST(Dergalova_Arina_ComplexNumberTest, sum) {
 	EXPECT_DOUBLE_EQ(1, num3.getIm());
 }
 
-TEST(Dergalova_Arina_ComplexNumberTest, substract) {
+TEST(Dergalova_Arina_ComplexNumberTest2, substract) {
 	double re1 = 4.0;
 	double im1 = 2.0;
 
@@ -44,7 +44,7 @@ TEST(Dergalova_Arina_ComplexNumberTest, substract) {
 	EXPECT_DOUBLE_EQ(2, num3.getIm());
 }
 
-TEST(Dergalova_Arina_ComplexNumberTest, multiply) {
+TEST(Dergalova_Arina_ComplexNumberTest3, multiply) {
 	double re1 = 2.0;
 	double im1 = 1.0;
 
@@ -59,7 +59,7 @@ TEST(Dergalova_Arina_ComplexNumberTest, multiply) {
 	EXPECT_DOUBLE_EQ(7, num3.getIm());
 }
 
-TEST(Dergalova_Arina_ComplexNumberTest, div) {
+TEST(Dergalova_Arina_ComplexNumberTest4, div) {
 	double re1 = 2.0;
 	double im1 = 1.0;
 	ComplexNumber c1(re1, im1);
@@ -75,7 +75,7 @@ TEST(Dergalova_Arina_ComplexNumberTest, div) {
 }
 
 
-TEST(Dergalova_Arina_ComplexNumberTest, compare) {
+TEST(Dergalova_Arina_ComplexNumberTest5, compare) {
 	double re1 = 4.0;
 	double im1 = 4.0;
 
