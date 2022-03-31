@@ -4,63 +4,86 @@
 
 #include "include/complex_number.h"
 
+TEST(Dergalova_Arina_ComplexNumberTest, add) {
+	double re = 0.0;
+	double im = 0.0;
 
-TEST(Dergalova_Arina_ComplexNumberTest, Sum) {
-	double real1 = 4.0;
-	double imag1 = 2.0;
-	ComplexNumber c1(real1, imag1);
+	ComplexNumber num(re, im);
 
-	double real2 = 3.0;
-	double imag2 = 2.0;
-	ComplexNumber c2(real2, imag2);
-
-	ComplexNumber result = c1 + c2;
-
-	EXPECT_DOUBLE_EQ(7.0, result.getRe());
-	EXPECT_DOUBLE_EQ(4.0, result.getIm());
+	EXPECT_DOUBLE_EQ(re, num.getRe());
+	EXPECT_DOUBLE_EQ(im, num.getIm());
 }
 
-TEST(Dergalova_Arina_ComplexNumberTest, Multiply) {
-	double real1 = 2.0;
-	double imag1 = 2.0;
-	ComplexNumber c1(real1, imag1);
+TEST(Dergalova_Arina_ComplexNumberTest, sum) {
+	double re1 = 1.5;
+	double im1 = 0.3;
 
-	double real2 = 3.0;
-	double imag2 = 1.5;
-	ComplexNumber c2(real2, imag2);
+	double re2 = 4.5;
+	double im2 = 0.7;
 
-	ComplexNumber result = c1 * c2;
+	ComplexNumber num1(re1, im1);
+	ComplexNumber num2(re2, im2);
+	ComplexNumber num3 = num1 + num2;
 
-	EXPECT_DOUBLE_EQ(3.0, result.getRe());
-	EXPECT_DOUBLE_EQ(9.0, result.getIm());
+	EXPECT_EQ(6, num3.getRe());
+	EXPECT_EQ(1, num3.getIm());
 }
 
-TEST(Dergalova_Arina_ComplexNumberTest, Divide) {
-	double real1 = 2.0;
-	double imag1 = 1.0;
-	ComplexNumber c1(real1, imag1);
+TEST(Dergalova_Arina_ComplexNumberTest, substract) {
+	double re1 = 4.0;
+	double im1 = 2.0;
 
-	double real2 = 2.0;
-	double imag2 = 1.0;
-	ComplexNumber c2(real2, imag2);
+	double re2 = 5.0;
+	double im2 = 2.0;
 
-	ComplexNumber result = c1 / c2;
+	ComplexNumber num1(re1, im1);
+	ComplexNumber num2(re2, im2);
+	ComplexNumber num3 = num1 - num2;
 
-	EXPECT_DOUBLE_EQ(1, result.getRe());
-	EXPECT_DOUBLE_EQ(0, result.getIm());
+	EXPECT_EQ(-1, num3.getRe());
+	EXPECT_EQ(2, num3.getIm());
 }
 
-TEST(Dergalova_Arina_ComplexNumberTest, Subtract) {
-	double real1 = 3.0;
-	double imag1 = 3.0;
-	ComplexNumber c1(real1, imag1);
+TEST(Dergalova_Arina_ComplexNumberTest, multiply) {
+	double re1 = 2.0;
+	double im1 = 1.0;
 
-	double real2 = 4.0;
-	double imag2 = 2.5;
-	ComplexNumber c2(real2, imag2);
+	double re2 = 3.0;
+	double im2 = 2.0;
 
-	ComplexNumber result = c1 - c2;
+	ComplexNumber num1(re1, im1);
+	ComplexNumber num2(re2, im2);
+	ComplexNumber num3 = num1 * num2;
 
-	EXPECT_DOUBLE_EQ(-1.0, result.getRe());
-	EXPECT_DOUBLE_EQ(0.5, result.getIm());
+	EXPECT_EQ(4, num3.getRe());
+	EXPECT_EQ(7, num3.getIm());
+}
+
+TEST(Dergalova_Arina_ComplexNumberTest, div) {
+	double re1 = 2.0;
+	double im1 = 1.0;
+	ComplexNumber c1(re1, im1);
+
+	double re2 = 2.0;
+	double im2 = 1.0;
+	ComplexNumber c2(re2, im2);
+
+	ComplexNumber num = c1 / c2;
+
+	EXPECT_DOUBLE_EQ(1, num.getRe());
+	EXPECT_DOUBLE_EQ(0, num.getIm());
+}
+
+
+TEST(Dergalova_Arina_ComplexNumberTest, compare) {
+	double re1 = 4.0;
+	double im1 = 4.0;
+
+	double re2 = 4.0;
+	double im2 = 4.0;
+
+	ComplexNumber num1(re1, im1);
+	ComplexNumber num2(re2, im2);
+
+	EXPECT_EQ(num1, num2);
 }
