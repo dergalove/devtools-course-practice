@@ -74,7 +74,6 @@ TEST(Dergalova_Arina_ComplexNumberTest4, division) {
 	EXPECT_EQ(0, num.getIm());
 }
 
-
 TEST(Dergalova_Arina_ComplexNumberTest5, compare) {
 	double re1 = 4.0;
 	double im1 = 4.0;
@@ -85,6 +84,6 @@ TEST(Dergalova_Arina_ComplexNumberTest5, compare) {
 	ComplexNumber num1(re1, im1);
 	ComplexNumber num2(re2, im2);
 
-	EXPECT_EQ(num1, num2);
+    EXPECT_EQ(num1, num2);
 }
 
